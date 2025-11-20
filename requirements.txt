@@ -4,3 +4,31 @@ pandas
 tqdm
 
 
+# --- Core ---
+numpy
+pandas
+scikit-learn
+
+# --- NLP ---
+nltk
+unidecode
+emoji
+
+# --- Sentence Embeddings ---
+sentence-transformers
+
+# --- FastText (version compatible Windows) ---
+fasttext-wheel
+
+# --- Deep Learning backend ---
+torch
+torchvision
+torchaudio
+
+# --- Utility ---
+tqdm
+regex
+
+# --- AWS (si tu vas déployer sur AWS ensuite) ---
+boto3
+awscli

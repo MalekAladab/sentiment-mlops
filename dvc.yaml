@@ -1,0 +1,15 @@
+stages:
+  preprocess:
+    cmd: python src/data/preprocess.py
+    deps:
+    - data/raw/youtube_comments.csv
+    - src/data/preprocess.py
+    outs:
+    - data/processed/youtube_cleaned.csv
+  scraping:
+    cmd: python src/scraping/youtube_scraper.py --video_id VOTRE_VIDEO_ID 
+      --out_csv data/raw/youtube_comments.csv
+    deps:
+    - src/scraping/youtube_scraper.py
+    outs:
+    - data/raw/youtube_comments.csv
