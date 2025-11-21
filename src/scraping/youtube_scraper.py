@@ -29,7 +29,7 @@ def get_comments(video_id, api_key, max_results=100):
         textFormat="plainText"
     )
 
-    print(f"🚀 Scraping commentaires pour video: {video_id}")
+    print(f" Scraping commentaires pour video: {video_id}")
 
     while request:
         response = request.execute()
