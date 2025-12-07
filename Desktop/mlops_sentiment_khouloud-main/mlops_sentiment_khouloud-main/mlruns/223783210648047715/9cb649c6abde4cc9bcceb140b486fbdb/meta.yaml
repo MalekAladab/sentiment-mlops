@@ -1,0 +1,14 @@
+artifact_uri: file:///D:/sentiment-mlops-main/sentiment-mlops-main/mlruns/223783210648047715/9cb649c6abde4cc9bcceb140b486fbdb/artifacts
+end_time: 1763913761024
+entry_point_name: ''
+experiment_id: '223783210648047715'
+lifecycle_stage: active
+run_id: 9cb649c6abde4cc9bcceb140b486fbdb
+run_name: sentiment-pytorch
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1763913758207
+status: 4
+tags: []
+user_id: Dell

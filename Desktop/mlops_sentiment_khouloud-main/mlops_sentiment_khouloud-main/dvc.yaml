@@ -1,0 +1,50 @@
+stages:
+  # ============================================================
+  # 1️⃣ Récupération des commentaires YouTube
+  # ============================================================
+  scraping:
+    cmd: python src/scraping/youtube_scraper.py --video_id VOTRE_VIDEO_ID --out_csv data/raw/youtube_comments.csv
+    deps:
+      - src/scraping/youtube_scraper.py
+    outs:
+      - data/raw/youtube_comments.csv
+
+  # ============================================================
+  # 2️⃣ Prétraitement des données
+  # ============================================================
+  preprocess:
+    cmd: python src/data/preprocess.py --input_csv data/raw/youtube_comments.csv --output_csv data/processed/youtube_cleaned.csv
+    deps:
+      - src/data/preprocess.py
+      - data/raw/youtube_comments.csv
+    outs:
+      - data/processed/youtube_cleaned.csv
+
+  # ============================================================
+  # 3️⃣ Prédiction du sentiment
+  # ============================================================
+  sentiment:
+    cmd: python src/model/sentiment_predictor.py --input data/processed/youtube_cleaned_v2.csv --output data/final/youtube_sentiment.csv
+    deps:
+      - src/model/sentiment_predictor.py
+      - data/processed/youtube_cleaned_v2.csv
+    outs:
+      - data/final/youtube_sentiment.csv
+
+  # ============================================================
+  # 4️⃣ Fine-tuning du modèle avec MLflow
+  # ============================================================
+  finetune_model:
+    cmd: python src/model/train_finetune_cpu.py \
+          --input_csv data/final/youtube_sentiment.csv \
+          --output_dir models/sentiment_ft_cpu \
+          --epochs 3 \
+          --batch_size 4 \
+          --max_length 64 \
+          --mlflow_experiment "Sentiment-Finetune-CPU"
+    deps:
+      - src/model/train_finetune_cpu.py
+      - data/final/youtube_sentiment.csv
+    outs:
+      - models/sentiment_ft_cpu
+      - mlruns  # dossier MLflow qui contient les runs

@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/0/ca8c1fbfaafb4ba0b37dd18f3896a53d/artifacts
+end_time: 1765053187958
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: ca8c1fbfaafb4ba0b37dd18f3896a53d
+run_name: youtube_sentiment_analysis
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1765052384184
+status: 4
+tags: []
+user_id: Dell

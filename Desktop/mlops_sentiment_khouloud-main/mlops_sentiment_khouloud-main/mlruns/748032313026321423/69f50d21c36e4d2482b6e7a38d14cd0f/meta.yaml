@@ -1,0 +1,14 @@
+artifact_uri: file:///C:/Users/Dell/Desktop/mlops_sentiment_khouloud-main/mlops_sentiment_khouloud-main/mlruns/748032313026321423/69f50d21c36e4d2482b6e7a38d14cd0f/artifacts
+end_time: null
+entry_point_name: ''
+experiment_id: '748032313026321423'
+lifecycle_stage: active
+run_id: 69f50d21c36e4d2482b6e7a38d14cd0f
+run_name: finetune_roberta
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1765118157068
+status: 1
+tags: []
+user_id: Dell

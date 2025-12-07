@@ -1,0 +1,6 @@
+artifact_location: file:///C:/Users/Dell/Desktop/mlops_sentiment_khouloud-main/mlops_sentiment_khouloud-main/mlruns/748460570411658955
+creation_time: 1765118357459
+experiment_id: '748460570411658955'
+last_update_time: 1765118357459
+lifecycle_stage: active
+name: Sentiment-Finetune-CPU
